@@ -1,6 +1,7 @@
 package ru.kpfu.itis.khakov.forms;
 
 import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
@@ -14,7 +15,7 @@ public class RegistrationForm {
             message = "Пароль недостаточно сложен: должны быть цифры, заглавные и строчные буквы и длина минимум 8 символов")
     private String password;
     @Pattern(regexp = "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,})",
-            message = "Пароль недостаточно сложен: должны быть цифры, заглавные и строчные буквы и длина минимум 8 символов")
+            message = "пароли не совпадают")
     private String confirmPassword;
 
     public RegistrationForm() {

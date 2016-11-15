@@ -7,6 +7,7 @@ import ru.kpfu.itis.khakov.entity.User;
 import ru.kpfu.itis.khakov.repository.UserRepository;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * Created by Rus on 26.04.2016.
@@ -30,4 +31,5 @@ public class UserService {
     public User add(User user) {
         return userRepository.saveAndFlush(user);
     }
+
 }
